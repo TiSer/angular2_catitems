@@ -1,7 +1,7 @@
 import {Component} from '@angular/core'
-import {CategoryFormComponent} from './categories/category-form.component'
-import {CategoriesListComponent} from './categories/categories-list.component'
-import {Category} from './categories/category'
+import {CategoryFormComponent} from './components/categories-form/category-form.component'
+import {CategoriesListComponent} from './components/categories-list/categories-list.component'
+import {Category} from "./shared/category.model"
 
 @Component({
   selector: "catitems",

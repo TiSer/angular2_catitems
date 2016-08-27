@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core' // Input is a decocator
-import { CategoryItem } from './category-item.component'
-import { Category } from './category'
+import { CategoryItem } from "../categories-item/category-item.component"
+import { Category } from "../../shared/category.model"
 
 // in {} for @Component goes Annotation
 @Component ({
   selector: 'categories-list',
-  templateUrl: "./app/categories/categories-list.component.html",
-  styleUrls: ["./app/categories/categories-list.component.css"],
+  templateUrl: "./app/components/categories-list/categories-list.component.html",
+  styleUrls: ["./app/components/categories-list/categories-list.component.css"],
   directives: [CategoryItem]
 })
 

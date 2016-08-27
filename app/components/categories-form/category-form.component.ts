@@ -1,10 +1,10 @@
 import {Component, Output, EventEmitter} from "@angular/core"
-import {Category} from "./category";
+import {Category} from "../../shared/category.model"
 
 @Component({
   selector: 'category-form',
-  templateUrl: "./app/categories/category-form.component.html",
-  styleUrls: ['./app/categories/category-form.component.css']
+  templateUrl: "./app/components/categories-form/category-form.component.html",
+  styleUrls: ["./app/components/categories-form/category-form.component.css"]
 })
 
 export class CategoryFormComponent {
