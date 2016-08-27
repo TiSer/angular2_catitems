@@ -1,4 +1,10 @@
-export class Category {
+export interface InterfaceCategory {
+  id: number;
+  name: string;
+}
+
+export class Category implements InterfaceCategory {
+  id: number;
   name: string;
   alias: string;
 
