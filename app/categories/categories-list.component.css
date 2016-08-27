@@ -1,0 +1,11 @@
+category-item {
+  display: flex;
+}
+
+category-item {
+  margin-left: 20px;
+}
+
+category-item:not(:last-child) {
+  margin-bottom: 10px;
+}

@@ -1,12 +1,5 @@
-<h1>{{ title }}</h1>
+<h1>{{ name }}</h1>
 
-<input type="text" class="form-control" placeholder="Title" #titleInput>
-<div class="btn-group" role="group" aria-label="...">
-  <button type="button" class="btn btn-default" (click)="addCategory(titleInput)">Add</button>
-</div>
+<category-form (added)="onCategoryAdded($event)"></category-form>
 
-<div *ngIf="categories.length > 0">
-  <ul class="jumbotron list-group">
-    <li class="list-group-item" *ngFor="let list of categories">{{list}}</li>
-  </ul>
-</div>
+<categories-list [categories]="categories"></categories-list>

@@ -1,0 +1,9 @@
+<div *ngIf="categories.length > 0">
+  <h3>Categories list</h3>
+
+  <ul class="jumbotron list-group">
+    <category-item *ngFor="let category of categories"
+                   [category]="category" (deleted)="onCategoryDeleted($event)">
+    </category-item>
+  </ul>
+</div>

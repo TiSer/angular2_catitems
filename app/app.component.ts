@@ -1,23 +1,25 @@
 import {Component} from '@angular/core'
+import {CategoryFormComponent} from './categories/category-form.component'
+import {CategoriesListComponent} from './categories/categories-list.component'
+import {Category} from './categories/category'
 
 @Component({
   selector: "catitems",
-  templateUrl: "./app/app.component.html"
+  templateUrl: "./app/app.component.html",
+  directives: [CategoryFormComponent, CategoriesListComponent]
 })
 
 export class AppComponent {
-	title: string;
-	categories: string[];
+	name: string;
+	categories: Category[];
 
 	constructor() {
-	  this.title = "Categories and items.";
+	  this.name = "Categories and items.";
 	  this.categories = [];
 	}
 
-  addCategory(input: HTMLInputElement) {
-    let title = input.value;
-    input.value = '';
-    this.categories.push(title);
+  onCategoryAdded(category: Category) {
+    this.categories.push(category);
   }
 
 }
