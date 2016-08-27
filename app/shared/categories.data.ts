@@ -1,4 +1,4 @@
-import InterfaceCategory from ".category.model"
+import { InterfaceCategory } from "./category.model"
 
 export let categories: InterfaceCategory[] = [
   { id: 1, name: "One" },

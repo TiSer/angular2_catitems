@@ -1,4 +1,5 @@
-<input type="text" class="form-control" placeholder="Enter name" (keyup.enter)="add(nameInput.value); nameInput.value = ''" #nameInput>
-<div class="btn-group" role="group" aria-label="...">
+<div class="form">
+  <input type="text" class="form-control" placeholder="Enter name"
+        (keyup.enter)="add(nameInput.value); nameInput.value = ''" #nameInput />
   <button type="button" class="btn btn-default" (click)="add(nameInput.value)">Add category</button>
 </div>

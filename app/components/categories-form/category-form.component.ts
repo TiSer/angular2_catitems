@@ -1,5 +1,6 @@
 import {Component, Output, EventEmitter} from "@angular/core"
 import {Category} from "../../shared/category.model"
+import {CategoryService} from "../../shared/category.service"
 
 @Component({
   selector: 'category-form',
@@ -10,9 +11,15 @@ import {Category} from "../../shared/category.model"
 export class CategoryFormComponent {
   @Output() added = new EventEmitter();
 
-  add(name: string) {
+  constructor(private categoryService: CategoryService) {
+
+  }
+
+  add(name: string): void {
     if (name) {
-      this.added.emit(new Category(name));
+      let category = new Category(name);
+      this.categoryService.addCategory(category);
+      //this.added.emit(new Category(name));
     }
   }
 }
