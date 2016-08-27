@@ -11,7 +11,13 @@ export class AppComponent {
 
 	constructor() {
 	  this.title = "Categories and items.";
-	  this.categories = ["Lenovo", "HP", "Dell", "Mac"];
+	  this.categories = [];
 	}
+
+  addCategory(input: HTMLInputElement) {
+    let title = input.value;
+    input.value = '';
+    this.categories.push(title);
+  }
 
 }
