@@ -1,16 +1,5 @@
-/// <reference path="../node_modules/angular2/ts/typings/node/node.d.ts"/>
-/// <reference path="../node_modules/angular2/typings/browser"/>
+import { AppComponent } from './app.component';
 
-import { Component } from 'angular2/core';
-import { bootstrap } from 'angular2/platform/browser';
-
-@Component({
-  selector: "catitems",
-  template: "<h1>Categories and items</h1>"
-})
-
-class AppComponent {
-  
-}
+import { bootstrap } from '@angular/platform-browser-dynamic';
 
 bootstrap(AppComponent);
